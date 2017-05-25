@@ -68,7 +68,7 @@ Code SequenceVersCode (uint8_t *sequence, int longeur){
 
 
 
-int main()
+/*int main()
 {
 	initialiser();
 	int j=Inserer(102,97);
@@ -89,4 +89,4 @@ int main()
 	uint8_t *w="fabcd";
 	int c = SequenceVersCode(w,5);
 	printf("%d\n",c );
-}
+}*/
