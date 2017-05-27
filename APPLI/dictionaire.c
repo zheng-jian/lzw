@@ -16,6 +16,7 @@ void initialiser(){
 
 	for(int i=0;i<256;i++)
 		printf("%c ",dico[i].mot);
+	printf("\n");
 }
 
 Code Inserer(Code prefixe, Code mono){
@@ -47,6 +48,11 @@ uint8_t *CodeVerChaine(Code code, int *longeur){
 
 Code SequenceVersCode (uint8_t *sequence, int longeur){
 	int result = -1;
+
+	if(longeur==1){
+		return (int)sequence[0];
+	}
+	else{
 	for(int i=0;i<ind_dico;i++){
 		if(dico[i].longeur==longeur){
 			elem p=dico[i];
@@ -61,9 +67,17 @@ Code SequenceVersCode (uint8_t *sequence, int longeur){
 				}
 
 			}
+
+			if(result==-1)
+				continue;
+			else
+			{
+				break;
+			}
 		}
 	}
 	return result;
+}
 }
 
 
@@ -71,22 +85,19 @@ Code SequenceVersCode (uint8_t *sequence, int longeur){
 /*int main()
 {
 	initialiser();
-	int j=Inserer(102,97);
-		int k=Inserer(j,98);
-				int l=Inserer(k,99);
-								int m=Inserer(l,100);
-								int n=Inserer(m,110);
-								int o=Inserer(n,97);
-								int q=Inserer(o,61);
+	int j=Inserer(97,98); //258 ab
+		int k=Inserer(98,99);//259 bc
+				int l=Inserer(99,97); //260 ca
+								int m=Inserer(j,99); //261 abc
+
 
 
 	printf("%d\n",m);
 	int *taille;
-	char * a=CodeVerChaine(264,taille);
+	char * a=CodeVerChaine(261,taille);
 	printf("%s\n",a );
-		printf("%c\n",dico[263].mot );
 
 	uint8_t *w="fabcd";
-	int c = SequenceVersCode(w,5);
+	int c = SequenceVersCode("abc",3);
 	printf("%d\n",c );
 }*/
