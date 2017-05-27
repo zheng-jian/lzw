@@ -14,9 +14,7 @@ void initialiser(){
 	}
 	ind_dico=258;
 
-	for(int i=0;i<256;i++)
-		printf("%c ",dico[i].mot);
-	printf("\n");
+
 }
 
 Code Inserer(Code prefixe, Code mono){
