@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdint.h>
 #include "compression.h"
 #include "dictionaire.h"
 
@@ -114,7 +113,7 @@ void codage(char *input, int taille){
 	
 }
 
-int main(){
+/*int main(){
 	codage("abcabcabcde",11);
 	int *taille;
 	printf("\n\n");
@@ -125,4 +124,4 @@ int main(){
 	//printf("%s\n",b);
 
 	return 0;
-}
+}*/
