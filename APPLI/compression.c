@@ -80,7 +80,9 @@ void codage(char *input, int taille){
 				break;
 			}*/
 			else if(i==taille-1 && longeur==1){
-				printf("%d\n",result);
+				printf("%d ",result);
+				int final =256;
+				printf("%d\n",final );
 				break;
 			}
 			else{
@@ -97,7 +99,9 @@ void codage(char *input, int taille){
 					temporaire=NULL;
 					free(wa);
 					wa=NULL;
-					printf("%d",result);
+					printf("%d ",result);
+					int final=256;
+					printf("%d",final );
 					break;
 				}
 				else{
